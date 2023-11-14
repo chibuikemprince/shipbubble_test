@@ -3,17 +3,22 @@ This is the README documentation for the Bus Ticketing Platform API. The API pro
 
 ## Technologies Used
 
-  Node.js with Express.js (TypeScript)
-  MySQL database
-  Sequelize ORM for database migrations
-   Docker for containerization
+- Node.js with Express.js (TypeScript)
+
+- MySQL database
+
+- Sequelize ORM for database migrations
+
+- Docker for containerization
 
 ## Prerequisites
 Make sure you have the following installed on your machine:
 
-  Node.js
-  Docker
-  Docker Compose 
+  - Node.js
+
+  - Docker
+
+  - Docker Compose 
 
 ## Installation
 
