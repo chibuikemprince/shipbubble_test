@@ -1,0 +1,36 @@
+version: "3"
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_DATABASE: "shipbubble"
+      MYSQL_USER: "prince"
+      MYSQL_PASSWORD: "prince"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "1"
+      MYSQL_RANDOM_ROOT_PASSWORD: ""
+    ports:
+      - "3306:3306"
+   
+    networks:
+      - mynetwork
+    restart: always  
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7002:7002"
+    depends_on:
+      - db
+     
+    environment:
+      MYSQLDBHOST: db # Use the service name as the hostname
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+
+

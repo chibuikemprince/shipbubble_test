@@ -1,0 +1,9 @@
+// create a database
+
+//-p prompts you enter a password
+mysql -u root -p -e "CREATE DATABASE shipbubble;"
+
+// no password prompts
+mysql -u root -e "CREATE DATABASE shipbubble;"
+
+sequelize-cli db:migrate
